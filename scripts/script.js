@@ -1,38 +1,4 @@
-/// avatar info variables
-var backgroundimg = { width: null, height: null, url: null },
-  useravatar = {
-    width: null,
-    height: null,
-    x: null,
-    y: null,
-    url: null,
-    avatar: null,
-  },
-  username = { width: null, height: null, x: null, y: null, url: null },
-  Konvas = {
-    Stage: null,
-    layer: null,
-    backimage: null,
-    useravatar: null,
-    avgroupe: null,
-    username: null,
-  };
-welcomedata = {
-  backwidth: null,
-  backheight: null,
-  avawidth: null,
-  avaheight: null,
-  avaX: null,
-  avaY: null,
-  userY: null,
-  userX: null,
-  user_W: null,
-  user_H: null,
-  user_fill: null,
-  userSize: null,
-  userapear: false,
-  avapear: false,
-};
+
 /// elements variables
 
 var submitbtn = document.getElementById("submit"),
@@ -76,6 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // get image info
     let imgurl = imageurlinput.value;
     let verifyImage = await verifyImageURL(imgurl);
+    console.log(verifyImage);
+    
     if (imgurl.length < 1 || verifyImage.error == false) {
       finaldiv.style.display = "none";
       wrongmsg.style.display = "block";
