@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcomer Dash</title>
+    <script src="https://unpkg.com/konva@8.3.5/konva.min.js" defer></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/loading.css" />
+    <link rel="stylesheet" href="./styles/coloris.css" />
+  </head>
+  <body>
+    <div class="loadingcontainer">
+      <div class="loading">
+        <div class="loader"><div class="dot"></div></div>
+        <div class="loader"><div class="dot"></div></div>
+        <div class="loader"><div class="dot"></div></div>
+        <div class="loader"><div class="dot"></div></div>
+        <div class="loader"><div class="dot"></div></div>
+        <div class="loader"><div class="dot"></div></div>
+      </div>
+      <div class="text">Please wait</div>
+    </div>
+    <div class="maincontainer">
+      <div class="Welcomecontainer">
+        <header class="welcomeheader">
+          <h1>Welcome image dashboard</h1>
+          <p>Paste url of image or drop it</p>
+        </header>
+        <div class="files" id="filesdiv">
+          <form action="#" class="file" id="files">
+            <input class="file-input" type="file" name="file" hidden />
+            <i class="fas fa-cloud-upload-alt"></i>
+            <p>Browse File to Upload or drop it here</p>
+          </form>
+        </div>
+        <div id="imgcontainer"><div id="finaldiv"></div></div>
+        <div>
+          <form action="#" class="formd">
+            <input id="imageurl" type="url" placeholder="Past image url" />
+            <section id="wrongmsg">
+              <div class="option_list">
+                <div class="option">
+                  <span>Wrong file format or Url, Must be an image</span>
+                  <div class="icon cross">
+                    <i class="fas fa-times" id="icon cross"></i>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="toggle__wrapper">
+              <label class="toggle" for="Usernametoggle" id="Usernamelabel">
+                <input
+                  class="toggle__input"
+                  name="myToggle"
+                  type="checkbox"
+                  id="Usernametoggle"
+                />
+                <div class="toggle__fill"></div>
+                Username</label
+              >
+              <label class="toggle" for="Useravatartoggle" id="Useravatarlabel">
+                <input
+                  class="toggle__input"
+                  name="myToggle2"
+                  type="checkbox"
+                  id="Useravatartoggle"
+                />
+                <div class="toggle__fill"></div>
+                User avatar</label
+              >
+            </div>
+            <div id="colorspick">
+              <input type="text" id="colorinput" data-coloris />
+            </div>
+            <div id="finalresults">
+              <div class="copydiv">
+                <input type="text" id="copytext" value="" disabled />
+                <i class="material-icons" onclick="copy('copytext')" id="copy"
+                  >content_copy</i
+                >
+              </div>
+              <section id="copied">
+                <div class="option_list">
+                  <div class="check">
+                    <span id="tetx">Welcome image data copied</span>
+                    <i class="far fa-check-circle"></i>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <button id="save" type="button">Save</button>
+            <button id="submit" type="button">Submit</button>
+            <button id="reset" type="button">Reset</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/konva@8.3.5/konva.min.js" defer></script>
+    <script src="./scripts/files.js"></script>
+    <script src="./scripts/loading.js"></script>
+    <script src="./scripts/coloris.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
